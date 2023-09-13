@@ -1,5 +1,7 @@
+import FilterableProductTable from '../component/FilterableProductTable';
+
 export default function Order() {
 	return (
-		<>주문</>
+		<FilterableProductTable />
 	);
 }
