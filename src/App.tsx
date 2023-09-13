@@ -1,4 +1,4 @@
-import KioskMenu from './pages/KisokMenu';
+import FilterableProductTable from './component/FilterableProductTable';
 import {styled} from 'styled-components';
 
 const Styleddiv = styled.div`
@@ -10,7 +10,7 @@ const Styleddiv = styled.div`
 export default function App() {
 	return (
 		<Styleddiv>
-			<KioskMenu />
+			<FilterableProductTable/>
 		</Styleddiv>
 	);
 }

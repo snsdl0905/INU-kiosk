@@ -1,5 +1,7 @@
 import {useState} from 'react';
 import {styled} from 'styled-components';
+import Category from './Category';
+
 const StyledDiv = styled.div`
 `;
 
@@ -21,15 +23,22 @@ const StyledButton = styled.button`
 `;
 
 export default function SearchBar() {
-	const [searchMenu, setSearchMenu] = useState('');
+	const [filterText, setFilterText] = useState('');
 	return (
 		<StyledDiv>
-			<StyledInput value={searchMenu} onChange={e => {
-				setSearchMenu(e.target.value);
-			}}></StyledInput>
-			<StyledButton onClick={() => {
-				setSearchMenu(' ');
-			}}>검색</StyledButton>
+			<StyledInput
+				value={filterText}
+				onChange={e => {
+					setFilterText(e.target.value);
+				}}
+			/>
+			<StyledButton
+				onClick={() => {
+					setFilterText(' ');
+				}}>
+					검색
+			</StyledButton>
+			<Category />
 		</StyledDiv>
 	);
 }
