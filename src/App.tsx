@@ -1,16 +1,10 @@
-import FilterableProductTable from './component/FilterableProductTable';
-import {styled} from 'styled-components';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import routes from './routes';
 
-const Styleddiv = styled.div`
-	display:flex;
-	flex-direction:column;
-	text-align:center;
-`;
+const router = createBrowserRouter(routes);
 
 export default function App() {
 	return (
-		<Styleddiv>
-			<FilterableProductTable/>
-		</Styleddiv>
+		<RouterProvider router={router}/>
 	);
 }
