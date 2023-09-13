@@ -1,0 +1,31 @@
+.Menu ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.Menu button{
+    background-color:#0B0B3B;
+	color:white;
+	border:1px solid black;
+	border-radius:20px;
+    padding:6px 20px;
+}
+
+.category{
+    display: flex;
+    justify-content: center;
+ }
+ 
+ .category ul{
+         display: flex;
+         list-style-type: none;
+ }
+ .category ul li{
+     font-size:25px;
+     padding:10px;
+ }
+ .category ul li:hover{
+     text-decoration: underline;
+ }
+
