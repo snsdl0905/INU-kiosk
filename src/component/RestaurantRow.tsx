@@ -1,5 +1,5 @@
-import type Menu from '../types/Food';
 import type Restaurant from '../types/Restaurant';
+
 import Foods from './Food';
 
 type RestaurantRowProps = {
@@ -7,13 +7,16 @@ type RestaurantRowProps = {
 };
 
 export default function RestaurantRow({restaurant}: RestaurantRowProps) {
+	const {id, category, name, menu} = restaurant;
 	return (
-		<div className='Menu' key={restaurant.id}>
-			<p>카테고리: {restaurant.category}</p>
-			<h2>{restaurant.name}</h2>
+		<div className='Menu' key={id}>
+			<p>카테고리: {category}</p>
+			<h2>{name}</h2>
 			<ul>
-				{restaurant.menu.map(menuItem => (
-					<Foods menuItem={menuItem}/>
+				{menu.map(food => (
+					<Foods
+						key={food.id}
+						food={food}/>
 				))}
 			</ul>
 		</div>
