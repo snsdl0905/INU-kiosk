@@ -1,4 +1,5 @@
 import type Restaurant from '../types/Restaurant';
+
 import Foods from './Food';
 
 type RestaurantRowProps = {
@@ -16,7 +17,6 @@ export default function RestaurantRow({restaurant}: RestaurantRowProps) {
 					<Foods
 						key={food.id}
 						food={food}/>
-
 				))}
 			</ul>
 		</div>
