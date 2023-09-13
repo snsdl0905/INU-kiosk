@@ -14,4 +14,4 @@ export default function Foods({food}: FoodsProps) {
 			<button>구매</button>
 		</li>
 	);
-}
+

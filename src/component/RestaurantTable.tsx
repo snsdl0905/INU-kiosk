@@ -1,3 +1,4 @@
+
 import './style.css';
 
 import {restaurants} from '../data.json';
