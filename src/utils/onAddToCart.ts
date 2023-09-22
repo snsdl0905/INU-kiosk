@@ -20,7 +20,6 @@ const onAddToCart = (food: Menu) => {
     };
     selectedFoods.push(newItem);
     alert(`${newItem?.name} 이(가) 장바구니에 추가되었습니다.`);
-
   }
 
   localStorage.setItem('cartItems', JSON.stringify(selectedFoods));
