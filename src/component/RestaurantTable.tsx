@@ -1,14 +1,16 @@
 import { restaurants } from '../data.json';
+import Restaurant from '../types/Restaurant';
 import RestaurantRow from './RestaurantRow';
 
-export default function RestaurantTable({ filterText }: { filterText: string }) {
-  const filteredRestaurants = restaurants.filter((restaurant) =>
-    restaurant.name.includes(filterText)
-  );
+type RestaurantTableProps = {
+  filteredRestaurant: Restaurant[];
+}
+
+export default function RestaurantTable({ filteredRestaurant }: RestaurantTableProps) {
 
   return (
     <div>
-      {filteredRestaurants.map((restaurant) => (
+      {filteredRestaurant.map((restaurant) => (
         <RestaurantRow key={restaurant.id} restaurant={restaurant} />
       ))}
     </div>

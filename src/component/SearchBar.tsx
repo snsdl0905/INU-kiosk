@@ -45,7 +45,7 @@ export default function SearchBar({ onSearch }: SearchBarProps) {
             >
                 검색
             </StyledButton>
-            <Category />
+            
         </StyledDiv>
     );
 }
